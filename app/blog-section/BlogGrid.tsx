@@ -2,7 +2,16 @@ import BlogCard from "./BlogCard";
 import { blogDetails } from "./blogDetails";
 import AnimatedWords2 from "../animations/AnimatedWords2";
 import { monaSans } from "../fonts/monaSans";
+import { StaticImageData } from "next/image";
 import AnimatedBody from "../animations/AnimatedBody";
+
+interface BlogCardProps {
+  title: string;
+  image: string | StaticImageData; // Accept both types
+  url: string;
+  date: string;
+  available: boolean;
+}
 
 const Blog = () => {
   return (
@@ -26,7 +35,7 @@ const Blog = () => {
             <BlogCard
               key={index}
               title={blog.title}
-              image={blog.image}
+              image={typeof blog.image === 'string' ? blog.image : blog.image.src}
               url={blog.url}
               date={blog.date}
               available={blog.available}
