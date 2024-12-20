@@ -3,6 +3,8 @@ import Image from "next/image";
 import { monaSans } from "../fonts/monaSans";
 import { motion } from "framer-motion";
 import { imageAnimation, bodyAnimation } from "../animations/animations";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import AnimatedWords from "../animations/AnimatedWords";
 import profile from "../../public/myProfile.jpg";
 
@@ -33,6 +35,45 @@ const Hero = () => {
         </div>
 
         <div className="flex gap-10 text-[#e4ded7] sm:gap-12 md:gap-14 lg:gap-14">
+  <Link
+    href="https://github.com/amleshwar-p"
+    target="_blank"
+    aria-label="View GitHub Profile"
+  >
+    <motion.div
+      className="text-[20px] md:text-[24px]"
+      variants={bodyAnimation}
+    >
+      <FontAwesomeIcon icon={faGithub} />
+    </motion.div>
+  </Link>
+  <Link
+    href="https://www.linkedin.com/in/amleshwar/"
+    target="_blank"
+    aria-label="View LinkedIn Profile"
+  >
+    <motion.div
+      className="text-[20px] md:text-[24px]"
+      variants={bodyAnimation}
+    >
+      <FontAwesomeIcon icon={faLinkedin} />
+    </motion.div>
+  </Link>
+  <Link
+    href="https://x.com/nimishpandeyy"
+    target="_blank"
+    aria-label="View Twitter Profile"
+  >
+    <motion.div
+      className="text-[20px] md:text-[24px]"
+      variants={bodyAnimation}
+    >
+      <FontAwesomeIcon icon={faTwitter} />
+    </motion.div>
+  </Link>
+</div>
+
+        {/* <div className="flex gap-10 text-[#e4ded7] sm:gap-12 md:gap-14 lg:gap-14">
           <Link
             href="https://github.com/amleshwar-p"
             target="_blank"
@@ -69,7 +110,7 @@ const Hero = () => {
               TW
             </motion.p>
           </Link>
-        </div>
+        </div> */}
       </div>
 
       <div className="-mt-36 flex flex-col items-center justify-center sm:-mt-20 lg:my-40 lg:-mt-2 lg:py-40 ">
