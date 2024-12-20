@@ -54,7 +54,7 @@ const About = () => {
               />
               <AnimatedBody
                 text={
-                  "C++ ,Pyhton , Javascript"
+                  "C++ ,Python , Javascript"
                 }
               />
             </div>
